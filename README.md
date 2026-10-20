@@ -171,11 +171,6 @@ Dehradun -> Rishikesh -> Haridwar
 Total Distance: 60 km
 All deliveries completed!
 ```
-## Output
-
-Here is a sample output of the program:
-
-![Program Output](OUTPUT-SS.jpg)
 
 **Example explanation:**
 
@@ -186,6 +181,12 @@ Here is a sample output of the program:
 - Total calculated distance: 60 km
 
 The program selects Rishikesh first because its shortest-path distance from Dehradun is smaller than Haridwar's.
+
+## Sample Output-SS
+
+-Here is a sample output of the program:
+
+![Program Output](OUTPUT-SS.jpg)
 
 *The output above is illustrative; actual output depends on the selected locations and the predefined graph.*
 
