@@ -171,6 +171,11 @@ Dehradun -> Rishikesh -> Haridwar
 Total Distance: 60 km
 All deliveries completed!
 ```
+## Output
+
+Here is a sample output of the program:
+
+![Program Output](OUTPUT-SS.jpg)
 
 **Example explanation:**
 
