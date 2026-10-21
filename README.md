@@ -15,6 +15,11 @@ This process continues until all requested deliveries are completed.
 
 **Note:** The project uses predefined sample road distances for demonstration. These values are not verified real-world distances.
 
+## 💡 The Core Challenge
+
+Finding the shortest path between two locations is not the same
+as finding the best order to visit multiple delivery locations.
+
 ## ✨ Features
 
 - Display all available delivery locations.
