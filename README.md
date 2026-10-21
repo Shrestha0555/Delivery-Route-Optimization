@@ -2,7 +2,10 @@
 
 A C++ Data Structures and Algorithms (DSA) project that helps determine a delivery sequence using a weighted graph, Dijkstra's shortest-path algorithm, a queue, and a priority queue.
 
-## 📌 Project Overview
+ ## PROJECT INTRODUCTION:
+The Delivery Route Optimizer is a C++ application designed to optimize delivery routes by finding efficient paths between locations, assigning deliveries to vehicles, and determining an effective delivery sequence.
+
+## 📌 Project overview
 
 The Delivery Route Optimizer is a menu-driven C++ application designed to plan delivery sequences between predefined locations.
 
@@ -242,7 +245,7 @@ Delivery-Route-Optimizer/
 **Project Name:** Delivery Route Optimizer  
 **Programming Language:** C++  
 **Project Type:** Data Structures and Algorithms (DSA)  
-**Application:** Delivery route planning using predefined locations
+**Application:** Delivery route planning using predefined locations....
 
 ---
 
