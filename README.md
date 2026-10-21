@@ -252,7 +252,7 @@ Delivery-Route-Optimizer/
 - C++
 - Graphs and adjacency lists
 - Dijkstra's algorithm
-- Priority queues and heaps
+- Priority queues
 - Greedy algorithms
 - Dynamic programming 
 - Object-oriented programming
