@@ -192,7 +192,7 @@ The program selects Rishikesh first because its shortest-path distance from Dehr
 
 ## Sample Output-SS
 
--Here is a sample output of the program:
+-Here is a sample output of the program SS from VS Code Editor:
 
 ![Program Output](OUTPUT-SS.jpg)
 
