@@ -247,6 +247,14 @@ Delivery-Route-Optimizer/
 **Project Type:** Data Structures and Algorithms (DSA)  
 **Application:** Delivery route planning using predefined locations....
 
----
+### 🛠️ Tech Stack
+
+- C++
+- Graphs and adjacency lists
+- Dijkstra's algorithm
+- Priority queues and heaps
+- Greedy algorithms
+- Dynamic programming 
+- Object-oriented programming
 
 *Developed as an academic project to demonstrate the practical application of Data Structures and Algorithms in C++.*
