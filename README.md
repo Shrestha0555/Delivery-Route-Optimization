@@ -91,7 +91,7 @@ The algorithm uses a min-priority queue to process the location with the smalles
 
 ### 3. Queue
 
-A queue stores the delivery locations that are still pending. After a delivery is selected, it is removed from the pending list.
+In our Delivery Route Optimizer project, a queue is used to store pending delivery location IDs. When the user enters delivery locations, they are added to the deliveryQueue using push(). During route optimization, front() retrieves a location and pop() removes it from the queue. The program checks the shortest distance to each pending location and selects the nearest one for the next delivery. This process continues until all deliveries are completed.
 
 ### 4. Priority Queue
 
