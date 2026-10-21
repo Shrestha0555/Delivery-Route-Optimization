@@ -1,3 +1,5 @@
+// Declares the DeliverySystem class, its data members, and function prototypes for managing locations, representing the road network, calculating shortest distances, and optimizing delivery routes.
+
 #ifndef DELIVERY_SYSTEM_H
 #define DELIVERY_SYSTEM_H
 
