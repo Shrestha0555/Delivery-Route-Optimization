@@ -64,7 +64,6 @@ void DeliverySystem::showLocations()
     }
 }
 
-// Dijkstra's algorithm using priority queue
 int DeliverySystem::shortestDistance(int source, int destination)
 {
     vector<int> dist(10, INT_MAX);
@@ -97,12 +96,11 @@ int DeliverySystem::shortestDistance(int source, int destination)
                 dist[next] = dist[current] + weight;
                 pq.push({dist[next], next});
             }
-        }                    
+        }
     }
 
     return dist[destination];
 }
-
 // Optimize delivery route
 void DeliverySystem::optimizeRoute()
 {
