@@ -95,7 +95,7 @@ In our Delivery Route Optimizer project, a queue is used to store pending delive
 
 ### 4. Priority Queue
 
-The priority queue is used inside Dijkstra's algorithm to process the shortest-distance candidates efficiently.
+In our Delivery Route Optimizer project, a priority queue is used in Dijkstra’s algorithm to find the shortest distance between two locations. It stores locations along with their current distances and processes the location with the smallest distance first. Whenever a shorter path is found, the updated distance is added to the priority queue. This helps calculate the shortest path efficiently between the warehouse and delivery locations.
 
 ### 5. Greedy Selection
 
