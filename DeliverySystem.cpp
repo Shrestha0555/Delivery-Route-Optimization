@@ -1,4 +1,5 @@
-#include "DeliverySystem.h"
+// CONTRIBUTION: Prajapati Aryan
+// Module: Graph Representation and Road Connections
 
 // Constructor
 DeliverySystem::DeliverySystem()
@@ -39,6 +40,17 @@ void DeliverySystem::addRoad(int a, int b, int distance)
 {
     graph[a].push_back({b, distance});
     graph[b].push_back({a, distance});
+}
+
+// Display all locations
+void DeliverySystem::showLocations()
+{
+    cout << "\n===== AVAILABLE LOCATIONS =====\n";
+
+    for (int i = 0; i < places.size(); i++)
+    {
+        cout << i << " - " << places[i] << endl;
+    }
 }
 
 // Display all locations
