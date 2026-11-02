@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteFlow | Delivery Route Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+ 
+        <div class="logo">
+            <span>DR</span>
+            <h2>RouteFlow</h2>
+        </div>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active" data-page="dashboard">▦ Dashboard</a>
+            <a href="#planner" class="nav-link" data-page="planner">＋ Plan Delivery</a>
+            <a href="#locations" class="nav-link" data-page="locations">⌖ Locations</a>
+            <a href="#route" class="nav-link" data-page="route">⇢ Route Results</a>
+            <a href="#about" class="nav-link" data-page="about">ⓘ About Project</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>DELIVERY ROUTE OPTIMIZER</p>
+            <small>Smart Route Management</small>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- PAGE 1: DASHBOARD -->
+        <section class="page active" id="dashboard">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Manage and optimize your delivery routes</p>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    System Ready
+                </div>
+            </header>
+
+            <section class="welcome">
+                <div>
+                    <h2>Welcome to RouteFlow</h2>
+                    <p>Plan smarter. Deliver faster. Save distance.</p>
+
+                    <button class="primary-btn" onclick="showPage('planner')">
+                        Start Planning →
+                    </button>
+                </div>
+
+                <div class="welcome-icon">↗</div>
+            </section>
+
+            <section class="stats">
+
+                <div class="stat-card">
+                    <p>Available Locations</p>
+                    <h2>10</h2>
+                    <small>Predefined delivery locations</small>
+                </div>
+
+                <div class="stat-card">
+                    <p>Route Algorithm</p>
+                    <h2>Dijkstra</h2>
+                    <small>Shortest path calculation</small>
+                </div>
+
+                <div class="stat-card">
+                    <p>Road Network</p>
+                    <h2>15</h2>
+                    <small>Predefined road connections</small>
+                </div>
+
+            </section>
+
+            <section class="planner">
+
+                <div class="section-heading">
+                    <h2>Quick Actions</h2>
+                    <p>Manage your delivery operations</p>
+                </div>
+
+                <div class="quick-grid">
+
+                    <button onclick="showPage('planner')">
+                        ＋ Plan New Delivery
+                    </button>
+
+                    <button onclick="showPage('locations')">
+                        ⌖ View Locations
+                    </button>
+
+                    <button onclick="showPage('route')">
+                        ⇢ View Route Results
+                    </button>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- PAGE 2: PLAN DELIVERY -->
+        <section class="page" id="planner">
+
+            <header class="topbar">
+                <div>
+                    <h1>Plan Delivery</h1>
+                    <p>Select warehouse and delivery destinations</p>
+                </div>
+            </header>
+
+            <section class="planner">
+
+                <div class="section-heading">
+                    <h2>Delivery Configuration</h2>
+                    <p>Choose your starting point and delivery locations</p>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Warehouse Location</label>
+
+                        <select id="warehouse">
+                            <option value="">Select Warehouse</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Delivery Locations</label>
+
+                        <div id="deliveryLocations" class="delivery-options"></div>
+
+                        <small>
+                            Hold Ctrl to select multiple locations.
+                        </small>
+                    </div>
+
+                </div>
+
+                <button id="optimizeBtn">
+                    Optimize Delivery Route →
+                </button>
+
+            </section>
+
+        </section>
+
+
+        <!-- PAGE 3: LOCATIONS -->
+        <section class="page" id="locations">
+
+            <header class="topbar">
+                <div>
+                    <h1>Available Locations</h1>
+                    <p>Explore the predefined delivery network</p>
+                </div>
+            </header>
+
+            <section class="locations">
+
+                <div class="section-heading">
+                    <h2>Our Delivery Network</h2>
+                    <p>10 available locations in the system</p>
+                </div>
+
+                <div class="location-grid" id="locationGrid">
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- PAGE 4: ROUTE RESULTS -->
+        <section class="page" id="route">
+
+            <header class="topbar">
+                <div>
+                    <h1>Route Results</h1>
+                    <p>View your optimized delivery information</p>
+                </div>
+            </header>
+
+            <section class="results">
+
+                <div class="section-heading">
+                    <h2>Optimized Route</h2>
+                    <p>Your delivery route and distance details</p>
+                </div>
+
+                <div id="routeOutput">
+    <p class="empty-message">
+        No route generated yet.
+        Plan a delivery to see your results here.
+    </p>
+</div>
+
+<div id="map" style="height: 400px; width: 100%; margin-top: 20px; border-radius: 12px;"></div>
+
+            </section>
+
+        </section>
+
+
+        <!-- PAGE 5: ABOUT PROJECT -->
+        <section class="page" id="about">
+
+            <header class="topbar">
+                <div>
+                    <h1>About Project</h1>
+                    <p>Learn more about RouteFlow</p>
+                </div>
+            </header>
+
+            <section class="planner about-content">
+
+                <h2>Delivery Route Optimizer</h2>
+
+                <p>
+                    Delivery Route Optimizer is a smart delivery
+                    management system designed to calculate efficient
+                    delivery routes using Data Structures and Algorithms.
+                </p>
+
+                <h3>Project Objectives</h3>
+
+                <ul>
+                    <li>Manage predefined delivery locations.</li>
+                    <li>Find shortest distances between locations.</li>
+                    <li>Optimize delivery sequence.</li>
+                    <li>Reduce overall delivery distance.</li>
+                </ul>
+
+                <h3>Technologies Used</h3>
+
+                <div class="technology-list">
+                    <span>C++</span>
+                    <span>Data Structures</span>
+                    <span>Dijkstra Algorithm</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <h3>Core Data Structures</h3>
+
+                <ul>
+                    <li>Graph – Represents the road network.</li>
+                    <li>Priority Queue – Used in Dijkstra's algorithm.</li>
+                    <li>Queue – Manages pending deliveries.</li>
+                    <li>Vector – Stores locations and distances.</li>
+                </ul>
+
+            </section>
+
+        </section>
+
+
+        <footer>
+            Delivery Route Optimizer | RouteFlow | C++ DSA Project
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

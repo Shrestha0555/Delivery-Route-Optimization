@@ -200,3 +200,104 @@ void DeliverySystem::optimizeRoute()
     cout << "\nTotal Distance: " << totalDistance << " km\n";
     cout << "All deliveries completed!\n";
 }
+
+// Calculate route for website integration
+bool DeliverySystem::calculateRoute(
+    int warehouse,
+    const vector<int>& deliveries,
+    vector<int>& route,
+    int& totalDistance)
+{
+    route.clear();
+    totalDistance = 0;
+
+    // Validate warehouse
+    if (warehouse < 0 || warehouse >= 10)
+        return false;
+
+    // Validate delivery count
+    if (deliveries.empty() || deliveries.size() > 9)
+        return false;
+
+    vector<bool> selected(10, false);
+    selected[warehouse] = true;
+
+    // Validate delivery locations
+    for (int location : deliveries)
+    {
+        if (location < 0 || location >= 10)
+            return false;
+
+        if (selected[location])
+            return false;
+
+        selected[location] = true;
+    }
+
+    queue<int> pending;
+
+    for (int location : deliveries)
+        pending.push(location);
+
+    int current = warehouse;
+
+    route.push_back(warehouse);
+
+    // Find nearest delivery location repeatedly
+    while (!pending.empty())
+    {
+        int nearest = -1;
+        int minDistance = INT_MAX;
+
+        queue<int> remaining;
+
+        while (!pending.empty())
+        {
+            int location = pending.front();
+            pending.pop();
+
+            int distance = shortestDistance(current, location);
+
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearest = location;
+            }
+
+            remaining.push(location);
+        }
+
+        bool removed = false;
+
+        while (!remaining.empty())
+        {
+            int location = remaining.front();
+            remaining.pop();
+
+            if (location == nearest && !removed)
+            {
+                removed = true;
+            }
+            else
+            {
+                pending.push(location);
+            }
+        }
+
+        if (nearest == -1 || minDistance == INT_MAX)
+            return false;
+
+        totalDistance += minDistance;
+        current = nearest;
+
+        route.push_back(current);
+    }
+
+    return true;
+}
+
+// Return available locations to the website
+const vector<string>& DeliverySystem::getLocations() const
+{
+    return places;
+}
