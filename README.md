@@ -21,15 +21,16 @@ By combining Data Structures, Algorithms, and web technologies, this project pro
 
 ## 🎯 2. Project Objectives
 
-The main objectives of RouteFlow are:
+The main objectives of the Delivery Route Optimizer are:
 
-- To understand and implement graph data structures.
-- To apply Dijkstra's Shortest Path Algorithm to a real-world routing problem.
-- To develop a C++ backend for handling delivery and route optimization logic.
-- To establish communication between the frontend and backend using HTTP.
-- To create an interactive web interface for route management.
-- To visualize optimized delivery routes using mapping technology.
-
+- To design a graph-based system for representing delivery locations and road connections.
+- To find the shortest and most efficient routes using Dijkstra's algorithm.
+- To calculate the total distance between selected delivery points.
+- To develop a C++ backend to manage route calculation and optimization.
+- To integrate the frontend and backend for smooth data communication.
+- To provide a user-friendly interface for selecting locations and viewing optimized routes.
+- To display the calculated routes visually using mapping technology.
+- To improve delivery planning by reducing unnecessary travel distance and saving time.
 ---
 
 ## ✨ 3. Key Features
