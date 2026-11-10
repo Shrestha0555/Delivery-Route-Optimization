@@ -10,40 +10,54 @@ It combines a C++ backend with an interactive web frontend to provide route opti
 
 ## 📌 1. Project Overview
 
-The Delivery Route Optimizer is a software-based solution designed to improve the efficiency of delivery operations by finding the shortest possible routes between different locations.
+In the logistics and delivery industry, selecting efficient routes is important for reducing travel distance and improving delivery operations.
 
-The project represents locations as nodes and roads as weighted edges in a graph. It applies Dijkstra's Shortest Path Algorithm to determine the most efficient route based on the given distances.
+RouteFlow addresses this problem by representing delivery locations as vertices and connecting roads as weighted edges in a graph.
 
-Users can select their source and destination locations through a web-based interface, and the system calculates and displays the optimized route along with the total distance.
+The system uses **Dijkstra's Shortest Path Algorithm** to calculate the shortest path between selected locations based on predefined road distances.
 
-By combining Data Structures, Algorithms, and web technologies, this project provides a practical approach to solving real-world route planning problems. It aims to reduce unnecessary travel distance, save time, and improve overall delivery efficiency.
+Through its web-based interface, users can select delivery locations, initiate route optimization, and view the calculated results on an interactive map.
+
+The project demonstrates the practical application of Data Structures and Algorithms along with backend and frontend integration.
+
 ---
 
 ## 🎯 2. Project Objectives
 
-The main objectives of the Delivery Route Optimizer are:
+The main objectives of RouteFlow are:
 
-- To design a graph-based system for representing delivery locations and road connections.
-- To find the shortest and most efficient routes using Dijkstra's algorithm.
-- To calculate the total distance between selected delivery points.
-- To develop a C++ backend to manage route calculation and optimization.
-- To integrate the frontend and backend for smooth data communication.
-- To provide a user-friendly interface for selecting locations and viewing optimized routes.
-- To display the calculated routes visually using mapping technology.
-- To improve delivery planning by reducing unnecessary travel distance and saving time.
+- To understand and implement graph data structures.
+- To apply Dijkstra's Shortest Path Algorithm to a real-world routing problem.
+- To develop a C++ backend for handling delivery and route optimization logic.
+- To establish communication between the frontend and backend using HTTP.
+- To create an interactive web interface for route management.
+- To visualize optimized delivery routes using mapping technology.
+
 ---
 
 ## ✨ 3. Key Features
-✨ 3. Key Features
 
-###- Shortest Path Calculation: Finds the shortest route between selected locations using Dijkstra's algorithm.
-###- Graph-Based Representation: Represents delivery points as vertices and roads as weighted edges.
-###- Distance Calculation: Calculates the total distance of the selected route.
-###- Interactive Web Interface: Allows users to select locations and manage route searches easily.
-###- Route Visualization: Displays optimized delivery paths on an interactive map.
-###- Frontend-Backend Integration: Connects the web interface with the C++ backend through HTTP communication.
-###- Efficient Route Planning: Helps minimize unnecessary travel distance and improve delivery planning.
-###- User-Friendly Design: Provides a simple and easy-to-use interface for viewing route results.
+### 1. Route Optimization
+Uses Dijkstra's algorithm to calculate the shortest path between selected delivery locations.
+
+### 2. Interactive Dashboard
+Provides a user-friendly web interface for accessing different sections of the application.
+
+### 3. Location Management
+Displays available delivery locations and allows users to select locations for delivery planning.
+
+### 4. Map-Based Visualization
+Uses Leaflet.js and OpenStreetMap to display route information through an interactive map.
+
+### 5. C++ Backend
+Handles location data, graph representation, shortest path calculations, and optimization requests.
+
+### 6. Frontend-Backend Communication
+Uses HTTP requests and JavaScript Fetch API to exchange information between the frontend and backend.
+
+### 7. Route Results
+Displays the calculated delivery route and relevant optimization results to the user.
+
 ---
 
 ## 🧠 4. Data Structures and Algorithms Used
