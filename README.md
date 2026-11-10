@@ -34,28 +34,16 @@ The main objectives of the Delivery Route Optimizer are:
 ---
 
 ## ✨ 3. Key Features
+✨ 3. Key Features
 
-### 1. Route Optimization
-Uses Dijkstra's algorithm to calculate the shortest path between selected delivery locations.
-
-### 2. Interactive Dashboard
-Provides a user-friendly web interface for accessing different sections of the application.
-
-### 3. Location Management
-Displays available delivery locations and allows users to select locations for delivery planning.
-
-### 4. Map-Based Visualization
-Uses Leaflet.js and OpenStreetMap to display route information through an interactive map.
-
-### 5. C++ Backend
-Handles location data, graph representation, shortest path calculations, and optimization requests.
-
-### 6. Frontend-Backend Communication
-Uses HTTP requests and JavaScript Fetch API to exchange information between the frontend and backend.
-
-### 7. Route Results
-Displays the calculated delivery route and relevant optimization results to the user.
-
+###- Shortest Path Calculation: Finds the shortest route between selected locations using Dijkstra's algorithm.
+###- Graph-Based Representation: Represents delivery points as vertices and roads as weighted edges.
+###- Distance Calculation: Calculates the total distance of the selected route.
+###- Interactive Web Interface: Allows users to select locations and manage route searches easily.
+###- Route Visualization: Displays optimized delivery paths on an interactive map.
+###- Frontend-Backend Integration: Connects the web interface with the C++ backend through HTTP communication.
+###- Efficient Route Planning: Helps minimize unnecessary travel distance and improve delivery planning.
+###- User-Friendly Design: Provides a simple and easy-to-use interface for viewing route results.
 ---
 
 ## 🧠 4. Data Structures and Algorithms Used
