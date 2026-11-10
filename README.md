@@ -10,16 +10,13 @@ It combines a C++ backend with an interactive web frontend to provide route opti
 
 ## 📌 1. Project Overview
 
-In the logistics and delivery industry, selecting efficient routes is important for reducing travel distance and improving delivery operations.
+The Delivery Route Optimizer is a software-based solution designed to improve the efficiency of delivery operations by finding the shortest possible routes between different locations.
 
-RouteFlow addresses this problem by representing delivery locations as vertices and connecting roads as weighted edges in a graph.
+The project represents locations as nodes and roads as weighted edges in a graph. It applies Dijkstra's Shortest Path Algorithm to determine the most efficient route based on the given distances.
 
-The system uses **Dijkstra's Shortest Path Algorithm** to calculate the shortest path between selected locations based on predefined road distances.
+Users can select their source and destination locations through a web-based interface, and the system calculates and displays the optimized route along with the total distance.
 
-Through its web-based interface, users can select delivery locations, initiate route optimization, and view the calculated results on an interactive map.
-
-The project demonstrates the practical application of Data Structures and Algorithms along with backend and frontend integration.
-
+By combining Data Structures, Algorithms, and web technologies, this project provides a practical approach to solving real-world route planning problems. It aims to reduce unnecessary travel distance, save time, and improve overall delivery efficiency.
 ---
 
 ## 🎯 2. Project Objectives
